@@ -1,4 +1,4 @@
 <?php 
-class Home extends Controller {
+class HomeController {
     
 }

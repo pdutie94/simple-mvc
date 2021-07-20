@@ -1,13 +1,9 @@
 <?php
 
-Route::set('index.php', function() {
-    Home::createView('index');
+Route::set('', function() {
+    View::make('Home');
 });
 
-Route::set('about-us', function() {
-    AboutUs::createView('about-us');
-});
-
-Route::set('contact-us', function() {
-    echo 'Contact us';
+Route::set('login', function() {
+  View::make('Login');
 });
