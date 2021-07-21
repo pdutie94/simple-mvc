@@ -3,9 +3,9 @@
 class Route {
 
 	/**
-	* Checks if the current route is valid. Checks the route
-	* against the global $Routes array.
-	*/
+	 * Checks if the current route is valid. Checks the route
+	 * against the global $Routes array.
+	 */
 	public static function isRouteValid() {
 		global $Routes;
 		$uri = $_SERVER['REQUEST_URI'];
