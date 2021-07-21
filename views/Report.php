@@ -20,7 +20,7 @@ if ( ! Login::isLoggedIn() ) {
 
 	<title>Báo cáo</title>
 	<style>
-		.button.add-section-btn {
+		.button.export-excel-btn {
 			margin-bottom: 1rem;
 		}
 	</style>
