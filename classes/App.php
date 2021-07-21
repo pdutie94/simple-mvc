@@ -12,7 +12,7 @@ class App {
   
       // Check if the route is in $Routes
       if (!in_array(explode('?',$uri)[0], $Routes)) {
-        die( 'Invalid route.' );
+        header( 'Location: ' . BASEURL );
       }
   
       return $uri;
@@ -25,7 +25,6 @@ class App {
      * If the route is invalid the app doesn't proceed any further.
     */
     public function run() {
-  
           // Should be capturing the output of this method. We will at some point.
           $this->getRoute();
     }

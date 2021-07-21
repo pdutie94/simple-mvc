@@ -1,5 +1,5 @@
 <?php
-if ( isset( $_SESSION['user_id'] ) ) {
+if ( Login::isLoggedIn() ) {
 	header( 'Location: ' . BASEURL );
 }
 
@@ -8,15 +8,14 @@ if ( isset( $_REQUEST['submit'] ) ) {
         $user_name     = htmlEntities($_POST['username'], ENT_QUOTES);
 		$user_password = htmlEntities($_POST['password'], ENT_QUOTES);
         $user = LoginController::getUser($user_name);
-        if( $user != null ) {
-            $user = $user[0];
+        if( $user ) {
             if ( password_verify( $user_password, $user['password'] ) ) {
 				// Login successful.
-				$_SESSION['user_id']              = $user['id'];
-				$_SESSION['last_login_timestamp'] = time();
+                setcookie('user_id', $user['id'], time() + 3600, BASEDIR);
 				header( 'Location: ' . BASEURL );
 			} else {
-				unset( $_SESSION['user_id'] );
+				unset( $_COOKIE['user_id'] );
+                setcookie('user_id', null, -1, '/');
 			}
         }
     }

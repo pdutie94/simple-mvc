@@ -7,3 +7,7 @@ Route::set('', function() {
 Route::set('login', function() {
   View::make('Login');
 });
+
+Route::set('edit-table', function() {
+  View::make('Table');
+});

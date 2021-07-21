@@ -13,9 +13,10 @@
     <!-- Milligram CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 
-    <title>Home Page</title>
+    <title>Trang chủ</title>
 </head>
 <body>
+    <?php include 'layout/header.php'; ?>
     <main class="site-content wrapper" style="margin-top: 50px;">
         <div class="container">
             <div class="row">
