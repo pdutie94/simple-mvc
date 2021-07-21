@@ -1,2 +1,3 @@
 Admin account:
-admin - Z=-@NW+e7xPgL4p7
+username: admin
+password: Z=-@NW+e7xPgL4p7
